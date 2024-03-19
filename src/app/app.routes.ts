@@ -1,3 +1,12 @@
 import { Routes } from '@angular/router';
 
-export const routes: Routes = [];
+import { ListComponent } from './modulos/products/pages/list/list.component';
+
+
+export const routes: Routes = [
+    {
+        path: '',
+        component: ListComponent
+    }
+];
+       
