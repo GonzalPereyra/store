@@ -1,17 +1,19 @@
 <!--<p>
-    <input type="number" [value]="duration()" (change)="changesDuration($event)">
+<input type="number" [value]="duration()" (change)="changesDuration($event)">
 </p>
 <p>
-    <input type="text" [value]="message()" (change)="changesMessage($event)">
+  <input type="text" [value]="message()" (change)="changesMessage($event)">
 </p>-->
 
 <div class="px-10">
-    <h1>About</h1>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit quae excepturi nam asperiores fugiat magni repellat laboriosam voluptates ipsum? Ad laudantium dolorem consequatur nobis fuga fugiat odit sapiente, officiis iure.</p>
-    <p>Numero de  cientes<app-counter [duration]="0" [message]="message()" *ngIf="duration() > 0"/></p>    
-    <div>
-        <app-weve-audio audioUrl="assets/src_assets_audio.mp3"/>
-    </div>
+  <h1>About</h1>
+  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit quae excepturi nam asperiores fugiat magni repellat laboriosam voluptates ipsum? Ad laudantium dolorem consequatur nobis fuga fugiat odit sapiente, officiis iure.</p>
+  <p>Numero de  cientes@if (duration() > 0) {
+    <app-counter [duration]="0" [message]="message()"/>
+  }</p>
+  <div>
+    <app-weve-audio audioUrl="assets/src_assets_audio.mp3"/>
+  </div>
 </div>
 
 

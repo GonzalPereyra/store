@@ -1,6 +1,21 @@
 <div class="grid grid-cols-3">
-    <app-products title="Product 1" [price]="12" img= 'https://picsum.photos/640/640?r=' (addToCart)="formChild($event)"/>
-    <app-products title="Product 2" [price]="12" img = 'https://picsum.photos/640/640?r=' (addToCart)="formChild($event)"/>
+  <!--
+  @for (product of products();   )() {
+    <app-products
+      [title]="product.title"
+      [price]="product.price"
+      [img]="product.image"
+      (addToCart)="formChild($event)" />    }-->
+
+      @for (product of products(); track product) {
+        <app-products
+          [title]="product.title"
+          [price]="product.price"
+          [img]="product.image"
+          (addToCart)="formChild($event)"/>
+      }
+ <!--
+    <app-products title="Product 6" [price]="12" img = 'https://picsum.photos/640/640?r=' (addToCart)="formChild($event)"/>
     <app-products title="Product 3" [price]="12" img = 'https://picsum.photos/640/640?r=' (addToCart)="formChild($event)"/>
-    <app-products title="Product 4" [price]="12" img = 'https://picsum.photos/640/640?r=' (addToCart)="formChild($event)"/>
+    <app-products title="Product 4" [price]="12" img = 'https://picsum.photos/640/640?r=' (addToCart)="formChild($event)"/>  -->
 </div>
