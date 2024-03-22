@@ -1,5 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, SimpleChanges, signal } from '@angular/core';
+
+
 @Component({
   selector: 'app-counter',
   standalone: true,
